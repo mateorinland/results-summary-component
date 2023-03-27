@@ -80,6 +80,17 @@ body {
   font-size: 1.125rem;
 }
 
+.result-section {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  text-align: center;
+}
+
+.result-title {
+  color: hsl(241, 100%, 89%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

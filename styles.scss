@@ -21,6 +21,17 @@ body {
     font-size: 1.125rem;
 }
 
+.result-section {
+    background-image: linear-gradient($Light_slate_blue_background, $Light_royal_blue_background);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    text-align: center;
+}
+
+.result-title {
+    color: $Light_lavender;
+}
+
 .attribution {
     font-size: 11px; text-align: center;
 }
