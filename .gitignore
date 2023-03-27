@@ -18,6 +18,3 @@
 /design
 *.md
 /assets/fonts
-/_reset.css
-.sass-cache/
-*.css.map
