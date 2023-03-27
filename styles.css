@@ -132,10 +132,79 @@ body {
 
 .summary-section {
   padding: 2rem;
+  display: flexbox;
 }
 
 .summary-title {
   font-size: 1.1rem;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 1rem;
+  border-radius: 13px;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.reaction {
+  background-color: hsl(6, 100%, 98%);
+}
+
+.memory {
+  background-color: hsl(42, 100%, 97%);
+}
+
+.verbal {
+  background-color: hsl(173, 53%, 97%);
+}
+
+.visual {
+  background-color: hsl(240, 71%, 97%);
+}
+
+.category > * {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.reaction-text {
+  color: hsl(6, 65%, 65%);
+}
+
+.memory-text {
+  color: hsl(39, 83%, 64%);
+}
+
+.verbal-text {
+  color: hsl(165, 41%, 49%);
+}
+
+.visual-text {
+  color: hsl(236, 37%, 39%);
+}
+
+.stat-number {
+  grid-column: 9/10;
+  color: hsl(224, 30%, 27%);
+  font-weight: 900;
+}
+
+.total-number {
+  grid-column: 10/13;
+  color: hsl(330, 1%, 64%);
+}
+
+.continue-button {
+  width: 100%;
+  border: transparent;
+  border-radius: 30px;
+  padding: 0.9rem 0;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
 }
 
 .attribution {
