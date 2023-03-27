@@ -85,10 +85,57 @@ body {
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   text-align: center;
+  padding: 2.5rem;
 }
 
 .result-title {
   color: hsl(241, 100%, 89%);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.result-circle {
+  background-image: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-rows: 20% 1fr 1fr 25%;
+}
+
+.big-number {
+  font-weight: 900;
+  color: hsl(0, 0%, 100%);
+  font-size: 3.5rem;
+  grid-row: 2/3;
+  line-height: 120%;
+}
+
+.small-number {
+  display: block;
+  color: hsl(241, 100%, 89%);
+  font-size: 1rem;
+  font-weight: 500;
+  grid-row: 3/4;
+}
+
+.result-descriptor {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+
+.result-text {
+  color: hsl(241, 100%, 89%);
+  font-size: 1rem;
+}
+
+.summary-section {
+  padding: 2rem;
+}
+
+.summary-title {
+  font-size: 1.1rem;
 }
 
 .attribution {
