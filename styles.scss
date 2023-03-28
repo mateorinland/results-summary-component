@@ -13,57 +13,97 @@ $Pale_blue: hsl(221, 100%, 96%);
 $Light_lavender: hsl(241, 100%, 89%);
 $Dark_gray_blue: hsl(224, 30%, 27%);
 
-html {
+body {
+    font-size: 1.125rem;
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
-body {
-    font-size: 1.125rem;
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.grid-flow {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+.grid-flow[data-spacing="large"] {
+    gap: 2rem;
+}
+
+.container {
+    max-width: 46rem;
+    display: grid;
+}
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: .5rem 1rem 3rem hsl(224, 30%, 27%, .2);
+        margin-inline: 1rem;
+    }
 }
 
 .result-section {
-    background-image: linear-gradient($Light_slate_blue_background, $Light_royal_blue_background);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    background: linear-gradient($Light_slate_blue_background, $Light_royal_blue_background);
+    border-radius: 0 0 2rem 2rem;
     text-align: center;
-    padding: 2.5rem;
+    padding: 2.5rem 4rem;
+}
+
+@media (min-width: 600px) {
+    .result-section {
+        border-radius: 2rem;
+    }
 }
 
 .result-title {
     color: $Light_lavender;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
 .result-circle {
-    background-image: linear-gradient($Violet_blue_circle, $Persian_blue_circle);
+    background: linear-gradient($Violet_blue_circle, $Persian_blue_circle);
     border-radius: 50%;
-    width: 9rem;
-    height: 9rem;
-    margin: 1rem auto;
+    width: 12rem;
+    height: 12rem;
+    margin-inline: auto;
     display: grid;
-    grid-template-rows: 20% 1fr 1fr 25%;
+    place-content: center;
 }
 
 .big-number {
     font-weight: 900;
     color: $White;
-    font-size: 3.5rem;
-    grid-row: 2 / 3;
-    line-height: 120%;
+    font-size: 4.5rem;
+    line-height: 110%;
 }
 
 .small-number {
     display: block;
-    color: $Light_lavender;
-    font-size: 1rem;
+    color: hsl(241, 100%, 89%, .5);
+    font-size: 1.2rem;
     font-weight: 500;
-    grid-row: 3 / 4;
 }
 
 .result-descriptor {
     color: $White;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .result-text {
@@ -73,70 +113,64 @@ body {
 
 .summary-section {
     padding: 2rem;
-    display: flexbox;
 }
 
 .summary-title {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
-.category {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
-    border-radius: 13px;
-    font-weight: 700;
-    margin: 1rem 0;
+    border-radius: .5rem;
 }
 
-.reaction {
-    background-color: hsla(6, 100%, 98%);
+.summary-item[data-item-type="accent-1"] {
+    background-color: hsl(6,100%,98%);
 }
 
-.memory {
+.summary-item[data-item-type="accent-2"] {
     background-color: hsl(42,100%,97%);
 }
 
-.verbal {
+.summary-item[data-item-type="accent-3"] {
     background-color: hsl(173,53%,97%);
 }
 
-.visual {
+.summary-item[data-item-type="accent-4"] {
     background-color: hsl(240,71%,97%);
 }
 
-.category > * {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-size: 1rem;
+.summary-item-title {
+    font-weight: 500;
+    font-size: 1.15rem;
 }
 
-.reaction-text {
-    color: hsl(6,65%,65%);
+.reaction {
+    color: $Light_red;
 }
 
-.memory-text {
-    color: hsl(39,83%,64%);
+.memory {
+    color: $Orangey_yellow;
 }
 
-.verbal-text {
-    color: hsl(165,41%,49%);
+.verbal {
+    color: $Green_teal;
 }
 
-.visual-text {
-    color: hsl(236,37%,39%);
+.visual {
+    color: $Cobalt_blue;
 }
 
-.stat-number {
-    grid-column: 9 / 10;
+.summary-score {
+    font-weight: 700;
+    color: hsl(300,4%,63%);
+}
+
+.summary-score span {
     color: $Dark_gray_blue;
-    font-weight: 900;
-}
-
-.total-number {
-    grid-column: 10 / 13;
-    color: hsl(330,1%,64%);
 }
 
 .continue-button {
@@ -146,6 +180,10 @@ body {
     padding: 0.9rem 0;
     background-color: $Dark_gray_blue;
     color: $White;
+}
+
+.continue-button:hover, .continue-button:focus-visible {
+    background: linear-gradient($Light_slate_blue_background, $Light_royal_blue_background);
 }
 
 .attribution {
