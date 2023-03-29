@@ -204,19 +204,19 @@ body {
   font-size: 1.15rem;
 }
 
-.reaction {
+.Reaction {
   color: hsl(0, 100%, 67%);
 }
 
-.memory {
+.Memory {
   color: hsl(39, 100%, 56%);
 }
 
-.verbal {
+.Verbal {
   color: hsl(166, 100%, 37%);
 }
 
-.visual {
+.Visual {
   color: hsl(234, 85%, 45%);
 }
 
