@@ -4,7 +4,7 @@ My solution for Frontend Mentor's Results summary component challenge.
 
 Using HTML5, CSS3 and SASS.
 * Semantic markup.
-* Accessibility (landmarks, alt text).
+* Audited by Lighthouse.
 * Grid and flexbox.
 * Mobile-first workflow.
 * Fetch JSON object.
