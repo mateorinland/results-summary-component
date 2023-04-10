@@ -1,3 +1,8 @@
+/*---------------------------
+ ** CSS Reset
+-----------------------------*/
+/* See https://piccalil.li/blog/a-modern-css-reset/
+
 /* Box sizing rules */
 *,
 *::before,
@@ -33,8 +38,8 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
 /* A elements that don't have a class get default styles */
@@ -46,8 +51,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -66,9 +71,9 @@ select {
   *,
   *::before,
   *::after {
+    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -77,7 +82,7 @@ body {
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
   body {
     min-height: 100vh;
     display: grid;
@@ -107,7 +112,7 @@ body {
   display: grid;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
   .container {
     grid-template-columns: 1fr 1fr;
     border-radius: 2rem;
@@ -123,7 +128,7 @@ body {
   padding: 2.5rem 4rem;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
   .result-section {
     border-radius: 2rem;
   }
@@ -168,7 +173,7 @@ body {
   font-size: 1rem;
 }
 
-.summary-section {
+.summary-article {
   padding: 2rem;
 }
 
@@ -233,21 +238,22 @@ body {
 .continue-button {
   width: 100%;
   border: transparent;
-  border-radius: 30px;
+  border-radius: 1.667rem;
   padding: 0.9rem 0;
   background-color: hsl(224, 30%, 27%);
   color: hsl(0, 0%, 100%);
 }
 
-.continue-button:hover, .continue-button:focus-visible {
+.continue-button:hover,
+.continue-button:focus-visible {
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.611rem;
   text-align: center;
 }
 
-.attribution a {
+.attribution-link {
   color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=styles.css.map */

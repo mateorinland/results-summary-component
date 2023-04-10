@@ -15,6 +15,13 @@
 .DS_Store
 .prettierignore
 
-/design
+#FrontendMentor's files#
 *.md
+/design
 /assets/fonts
+
+#IDE#
+/node_modules
+package.json
+package-lock.json
+.eslintrc.js

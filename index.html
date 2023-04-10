@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Results summary component</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Frontend Mentor challenge for web development. This one is a card with two sides: one provides
+        data about a user's test results and the other is a summary of said results."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Results summary component</title>
+  </head>
 
-<body>
+  <body>
+    <main class="container">
+      <section class="result-section grid-flow" data-spacing="large">
+        <h1 class="result-title">Your Result</h1>
+        <div class="result-circle">
+          <p class="big-number">76</p>
+          <p class="small-number">of 100</p>
+        </div>
+        <div class="grid-flow">
+          <p class="result-descriptor">Great</p>
+          <p class="result-text">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </section>
 
-<main class="container">
+      <article class="summary-article grid-flow" data-spacing="large">
+        <h2 class="summary-title">Summary</h2>
+        <div class="grid-flow" id="summary-items-container"></div>
+        <button class="continue-button">Continue</button>
+      </article>
+    </main>
 
-  <section class="result-section grid-flow" data-spacing="large">
-    <h1 class="result-title">Your Result</h1>
-    <div class="result-circle">
-      <p class="big-number">76</p>
-      <p class="small-number">of 100</p>
-    </div>
-    <div class="grid-flow">
-      <p class="result-descriptor">Great</p>
-      <p class="result-text">You scored higher than 65% of the people who have taken these tests.</p>
-    </div>
-  </section>
+    <footer>
+      <p class="attribution">
+        Coded by
+        <a
+          class="attribution-link"
+          href="https://www.linkedin.com/in/mateo-rinland-9b1a93bb/"
+          aria-label="Mateo Rinland's LinkedIn profile"
+          >Mateo Rinland</a
+        >. Challenge by
+        <a
+          class="attribution-link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >.
+      </p>
+    </footer>
 
-  <section class="summary-section grid-flow" data-spacing="large">
-    <h2 class="summary-title">Summary</h2>
-    <div class="grid-flow" id="summary-items-container"></div>
-    <button class="continue-button">Continue</button>
-  </section>
-
-</main>
-
-<footer class="attribution">
-  Coded by <a href="https://www.linkedin.com/in/mateo-rinland-9b1a93bb/">Mateo Rinland</a>.
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-</footer>
-
-<script src="./script.js"></script>
-
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
